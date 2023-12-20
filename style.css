@@ -1,80 +1,749 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
+
+body {
     font-family: Arial;
 }
-header{
-   width:100%;
-   height:100px;
+
+#myButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
 }
-header{
-  background-color:white;
-  border-bottom: 1px solid black;
- 
-.hleft{
-    float:left;
+
+header {
+    width: 100%;
+    height: 200px;
 }
-.hleft img{
-    height: 80px;
-    width:80px;
-    left:40px;
-    top:20px;
+
+header {
+    background-color: white;
+}
+
+.hleft {
+    float: left;
+}
+
+.hleft img {
+    height: 180px;
+    width: 180px;
+    left: 40px;
+    top: 10px;
     position: absolute;
 }
 
-.hright{
-    float:right;
-  
+.hright {
+    float: right;
+
 }
-.hright{    
-    right:40px;
-    top:70px;
-    position:relative;
-   
-   
+
+.hright {
+    right: 40px;
+    top: 160px;
+    position: relative;
+
+
 }
-.hright div{
+
+.hright div {
     display: inline;
-    margin:10px;
+    margin: 10px;
 }
-#login-button{
+
+#login-button {
     background-size: 100% 500px;
-    border:none;
+    border: none;
     background-color: whitesmoke;
-    color:black;
+    color: black;
     text-decoration: none;
     font-size: 15px;
     text-align: center;
-    padding:5px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
-#login-button:hover{
-    background-color: paleturquoise;
+
+#login-button:hover {
+    background-color: #80ea53;
+    ;
     transition: 0.7s;
 }
-#subscribe-button{
-    border:none;
+
+#subscribe-button {
+    border: none;
     background-color: whitesmoke;
-    color:black;
+    color: black;
     text-decoration: none;
     font-size: 15px;
     text-align: center;
-    padding:5px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
-#subscribe-button:hover{
-    background-color: paleturquoise;
+
+#subscribe-button:hover {
+    background-color: #80ea53;
+    ;
     height: 200px;
     transition: 0.7s;
 }
+
 nav {
+    clear: both;
+    height: 70px;
     width: 100%;
-    height: 300px;
-    background-color: aqua;
+    background-color: #40b50e;
+
+}
+
+nav {
+    display: inline-block;
+}
+
+#nav-left {
+    float: left;
+    left: 90px;
+    position: relative;
+}
+
+#nav-logo {
+    padding-top: 10px;
+}
+
+#nav-logo i {
+    color: aliceblue;
+}
+
+#nav-logo p {
+    color: aliceblue;
+    display: inline;
+    font-size: 25px;
+    bottom: 20px;
+    position: relative;
+}
+
+.btn-no-border:focus,
+.btn-no-border:active {
+    box-shadow: none;
+}
+
+.btn-group a {
+    color: #f8fbf7;
+    padding-top: 15px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.btn-group a:hover {
+    color: black;
+}
+
+.btn-group button {
+    color: #f8fbf7;
+    padding-top: 15px;
+    margin-top: 7px;
+}
+
+.btn-group li a {
+    color: rgb(47, 43, 43);
+    padding-top: 25px;
+}
+
+#nav-right {
+    float: right;
+    right: 50px;
+    position: relative;
+
+}
+
+#search-icon {
+    display: inline-block;
+    top: 10px;
+    position: relative;
+}
+
+#search-icon i {
+    cursor: pointer;
+    color: aliceblue;
+
+}
+
+#search-icon i:hover {
+    opacity: 0.5;
+}
+
+#thinkgreen {
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 15px;
+    height: 30%;
+}
+
+main {
+    width: 100%;
+    background-color: #cacaca;
+    height: 1000px;
+    display: table;
+}
+
+#main-body {
+    display: table-row;
 }
 
 
+#section-middle,
+#aside-left,
+#aside-right {
+    display: table-cell;
+    vertical-align: top;
+}
+
+#aside-left {
+    padding-left: 5px;
+    width: 25%;
+    padding-top: 5px;
+}
+
+#aside-right {
+    right: 30px;
+    width: 250px;
+    padding-top: 5px;
+    position: relative;
+}
+
+#content p {
+    font-size: 10px;
+}
+
+#right-title {
+    color: black;
+    font-size: 25px;
+    margin: 10px;
+    background-color: #f8fbf7;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+
+#left-title {
+    color: black;
+    font-size: 25px;
+    margin: 10px;
+    background-color: #f8fbf7;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+    margin-left: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+    height: 20%;
+    width: fit-content;
+}
+
+.card div img {
+    float: left;
+    width: 50%;
+    height: 220px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card div#content {
+    width: 50%;
+    float: right;
+    padding: 5px;
+
+}
+
+#content h6 {
+    margin-top: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card h6:hover {
+    color: #a5aaa3;
+}
+
+.card p {
+    color: black;
+}
+
+#content h6 {
+    margin-top: 5px;
+}
+
+#content button {
+    margin-bottom: 10px;
+}
+
+.modal-body {
+    display: inline-block;
+}
+
+.modal-body img {
+    float: left;
+}
+
+#introduction {
+    float: right;
+    padding-left: 20px;
+    width: 50%;
+}
+
+#introduction2 {
+    padding-top: 200px;
+}
+
+#section-middle {
+    padding-top: 15px;
+    width: 65%;
+    height: 900px;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
+#above-slide {
+    display: block;
+
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 60%;
+}
+
+#login-form {
+    background-color: rgb(160, 216, 249);
+    height: 400px;
+    text-align: center;
+    display: none;
+}
+
+#login-title {
+    background-color: #2c7ada;
+    color: rgb(247, 244, 244);
+    width: 600px;
+    margin-left: 80px;
+}
+
+.row {
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+#register-form {
+    background-color: rgb(160, 216, 249);
+    height: 600px;
+    text-align: center;
+    display: none;
+}
+
+#register-title {
+    background-color: #2c7ada;
+    color: rgb(247, 244, 244);
+    width: 90%;
+    margin-left: 50px;
+}
+
+#register-form button {
+    margin-top: 15px;
+}
+
+
+#slide :hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+h5 {
+    text-align: center;
+    padding: 10px;
+}
+
+#below-card {
+    padding-top: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+#container1 {
+    float: left;
+}
+
+#container1 {
+    border-radius: 20px;
+    width: 48%
+}
+
+.news a {
+    text-decoration: none;
+    color: black;
+}
+
+.news a:hover {
+    opacity: 0.5;
+}
+
+.news h5 {
+    text-align: left;
+}
+
+.news p {
+    font-size: small;
+    margin-left: 10px;
+}
+
+
+#container1 img {
+    height: 300px;
+    width: 100%;
+}
+
+#container2 {
+    float: right;
+}
+
+#container2 {
+    border-radius: 20px;
+    width: 48%;
+}
+
+#container2 img {
+    height: 300px;
+    width: 100%;
+}
+
+.container img:hover {
+    opacity: 0.5;
+}
+
+#footer {
+    background-color: #40b50e;
+    width: 100%;
+    height: 30%;
+
+}
+#footer div.row{
+    margin-top: 0px;
+}
+#footer.row{
+    padding: 10px;
+}
+#footer-col1 p{
+    display: inline-block;
+    font-size: medium;
+}
+#footer-col2,#footer-col1 {
+    color: #f8fbf7;
+}
+
+#footer-col2 p {
+    font-size: small;
+}
+
+#footer-col2 a {
+    text-decoration: none;
+    color: #f8fbf7;
+}
+#social-connection{
+    display: inline;
+}
+
+#marquee1 {
+    width: 100%;
+    height: 400px;
+}
+
+.picture1 {
+    width: 100%;
+    height: 200px;
+}
+
+.picture1:hover {
+    opacity: 0.5;
+
+}
+
+#marquee1 a {
+    text-decoration: none;
+    color: #fa5204
+}
+
+#marquee1 a:hover {
+    color: antiquewhite;
+}
+
+
+@media (max-width: 1500px) {
+    body {
+        font-size: 15px;
+    }
+
+    .hleft img {
+        margin-top:50px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .hright div i ,.hright div a{
+        font-size: 10px;
+    }
+
+    nav {
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+
+    #nav-left,
+    #nav-right {
+        display: contents;
+    }
+
+    .btn-group a,
+    button {
+        font-size: 20px;
+    }
+
+    /* About us */
+    div.index {
+        text-align: left;
+    }
+
+    #searchTF{
+        display: inline;
+    }
+    #search-icon i {
+        top: 10px;
+        position: relative;
+    }
+
+    main {
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+
+    #aside-left,
+    #aside-right,
+    #section-middle {
+        display: table-row;
+    }
+
+    #aside-left {
+        left: 30px;
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        margin: 20px;
+        height: fit-content;
+    }
+
+    #left-title {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    .card {
+        width: 80%;
+        height: 100%;
+    }
+
+    .card div img {
+        width: 50%;
+    }
+
+    .card div#content {
+        text-align: center;
+        width: 40%;
+        height: 100%;
+    }
+
+    .card div#content button {
+        font-size: medium;
+        margin-right: 20px;
+    }
+
+    #content p {
+        font-size: 10px;
+    }
+
+    #thinkgreen {
+        width: 80%;
+        padding: 50px;
+
+    }
+
+    #section-middle {}
+
+    #section-middle {
+        padding-top: 5px;
+        width: 100%;
+        height: 50%;
+        padding-right: 10px;
+        padding-left: 5px;
+        text-align: center;
+    }
+
+    #slide img {
+        width: 80%;
+    }
+
+    #login-form {
+        left: 40px;
+        position: relative;
+        margin-top: 10px;
+        width: 80%;
+        height: fit-content;
+        padding-right: 40px;
+    }
+
+    .row {
+        width: 80%;
+        right: 100px;
+        position: relative;
+    }
+
+    #login-title {
+        width: 80%;
+        right: 35px;
+        position: relative;
+    }
+
+    .carousel-item img {
+        padding: 20px;
+        width: 80%;
+        height: 50%;
+    }
+
+    #register-form {
+        left: 40px;
+        position: relative;
+        margin-top: 10px;
+        width: 80%;
+        height: fit-content;
+    }
+
+    #register-title {
+        width: 90%;
+        right: 35px;
+        position: relative;
+    }
+
+
+
+    /* This is for login-form and register-form */
+    #below-card {
+        width: 100%;
+        height: 50%;
+    }
+
+    #container1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container h5 {
+        font-size: 10px;
+    }
+
+    .container p {
+        font-size: x-small;
+    }
+
+    #container2 img {
+        height: 100%;
+    }
+
+    #aside-right {
+        left: 30px;
+        position: relative;
+        width: 50%;
+    }
+
+    #right-title {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    #marquee {
+        display: block;
+    }
+
+    #marquee1 a {
+        font-size: 10px;
+    }
+
+    .picture1 {
+        width: 60%;
+    }
+
+    #myButton {
+        font-size: smaller;
+    }
+}
+@media (max-width:600px){
+    #body{
+        font-size: 15px;
+    }
+    .btn-group a
+     {
+        font-size: 15px;
+    }
+    .btn-group button{
+        font-size: 15px;
+    }
+    #search-icon{
+        font-size: 10px;
+        right:10px;
+        position: relative;
+    }
+     #nav-logo i {
+        font-size: 30px;
+        ;
+    }
+
+    #nav-logo p {
+        top:1px;
+        position: relative;
+        font-size: 15px;
+    } 
+    /* #login-form {
+        left: 40px;
+        position: relative;
+        margin-top: 10px;
+        width: 80%;
+        height: fit-content;
+        padding-right: 40px;
+    } */
+
+    .row {
+        width: 80%;
+       padding-right:100px;
+       margin-right:20px;
+    }
+
+}

@@ -3,39 +3,526 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Environmental Protection</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="style.css">
+    <script>
+
+    </script>
 </head>
 
 <body>
     <header>
-
         <div class="hleft">
             <img src="images\logoimage.png" alt="logoimage">
         </div>
         <div class="hright">
-           <div>
-            <i class="fa fa-sign-in fa-1x" aria-hidden="true"></i>
-            <a href="#" id="login-button">LOGIN</a>
-           
-           </div>
-           <div>
-            <i class="fa fa-user-plus fa-1x" aria-hidden="true"></i>
-            <a href="#" id="subscribe-button">SUBSCRIBE</a>
-           </div>
+            <div>
+                <i class="fa fa-sign-in fa-1x" aria-hidden="true"></i>
+                <a href="#" id="login-button" onclick="clickLogin()">LOGIN</a>
+
+            </div>
+            <div>
+                <i class="fa fa-user-plus fa-1x" aria-hidden="true"></i>
+                <a href="#" id="subscribe-button" onclick="clickSubscribe()">SUBSCRIBE</a>
+            </div>
         </div>
     </header>
     <nav>
-      
+        <div class="nav-content">
+            <div id="nav-left">
+                <div id="nav-logo">
+                    <i class="fa fa-recycle fa-4x"></i>
+                    <p>Nurturing Our Planet for Future Generations</p>
+                </div>
+            </div>
+            <div id="nav-right">
+                <div class="btn-group dropright" role="group">
+                    <a href="#" onclick="location.href='course_project.html'" class="btn btn-no-border  btn-lg"
+                        role="button">Home</a>
+                    <a href="#" class="btn btn-no-border btn-lg" data-bs-toggle="offcanvas"
+                        data-bs-target="#aboutus-canvas" role="button">About Us</a>
+                    <a href="#" class="btn  btn-no-border btn-lg" role="button" data-bs-target="#contactPopupModal"
+                        data-bs-toggle="modal">Contact</a>
+                    <a href="#" class="btn btn-no-border btn-lg" role="button">Donate</a>
+                    <div class="btn-group dropright" role="group">
+                        <button type="button" class="btn btn-no-border btn-lg dropdown-toggle"
+                            data-bs-toggle="dropdown">
+                            Topics
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Climate Change</a></li>
+                            <li><a class="dropdown-item" href="#">Global Warning</a></li>
+                            <li><a class="dropdown-item" href="#">Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div id="search-icon">
+                        <i class="fa fa-search fa-2x" data-bs-toggle="offcanvas" data-bs-target="#search-canvas"></i>
+                    </div>
+                    <div class="offcanvas offcanvas-top" id="search-canvas" tabindex="-1"
+                        aria-labelledby="offcanvasTopLable">
+                        <div class="offcanvas-header">
+                            <h4 style="color:rgb(2, 183, 122)" id="offcanvasHeader">SAVE THE EARTH</h4>
+                            <button  type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <input style="width: 100%" type="text" class="form-control form-control-sm" id="searchTF">
+                            <button type="button" class="btn btn-success">Search</button>
+                        </div>
+                    </div>
+                    <div style="width: 40%;" class="offcanvas offcanvas-start" id="aboutus-canvas" tabindex="-1"
+                        aria-labelledby="offcanvasStartLable">
+                        <div class="offcanvas-header">
+                            <h4 style="color:rgb(2, 183, 122)" id="offcanvasHeader"><strong>ABOUT US</strong></h4>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <img style="width: 100%;height: 50%;" src="images\savetheplanetearth.jpg">
+                            <div class="index">
+                                <h5><strong>1.Introduction:</strong></h5>
+                                <p>Welcome to the heart of change – the Save The Earth campaign. At Save The Earth, we
+                                    believe that every individual possesses the power to make a difference. Our mission
+                                    is
+                                    to inspire, educate, and mobilize communities worldwide to protect and preserve our
+                                    planet for current and future generations.</p>
+                            </div>
+                            <div class="index">
+                                <h5><strong>2.Our Mission</strong></h5>
+                                <p>At the core of our mission is the commitment to create a sustainable and harmonious
+                                    world. We aim to raise awareness about pressing environmental issues, advocate for
+                                    responsible practices, and drive meaningful actions that contribute to a healthier,
+                                    cleaner Earth.</p>
+                            </div>
+                            <div class="index">
+                                <h5><strong>3.What Drives Us:</strong></h5>
+                                <p>The urgency of environmental challenges propels us forward. Whether it's combating
+                                    climate change, addressing pollution, or promoting biodiversity, our passion is
+                                    fueled by the profound understanding that the health of the planet is intertwined
+                                    with our own.</p>
+                            </div>
+                            <div class="index">
+                                <h5><strong>4.Our Approach:</strong></h5>
+                                <p>Save The Earth employs a multifaceted approach to catalyze change. Through engaging
+                                    campaigns, educational initiatives, and collaborative projects, we strive to effect
+                                    positive change at the individual, community, and global levels. We firmly believe
+                                    that small actions, when multiplied, can lead to significant impact</p>
+                            </div>
+                            <img style="width: 100%;height: 50%;" src="images\37067905-origin.webp">
+                            <div class="index">
+                                <h5><strong>5.Get Involed</strong></h5>
+                                <p>We invite you to join us on this journey toward a sustainable future. Whether you're
+                                    an environmental enthusiast, a student, a business leader, or a concerned citizen,
+                                    there's a place for you in our community. Explore our campaigns, participate in our
+                                    events, and discover how you can contribute to saving the Earth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="contactPopupModal" aria-hidden="true" aria-labelledby="contactPopupModal"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title " id="contact-title">Contact Us</h5>
+                                <button type="button" class="btn btn-close text-reset" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="firstname" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="fistname"
+                                        placeholder="Enter your first name">
+                                    <label for="lastname" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastname"
+                                        placeholder="Enter your last name">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" rows="3"
+                                        placeholder="Enter your email">
+                                    <label for="message" class="form-label">Message*</label>
+                                    <textarea class="form-control" id="message"
+                                        placeholder="What can we help you with ?"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success" data-bs-target="#contactPopupModal"
+                                    data-bs-dismiss="modal" data-bs-toggle="modal">Send Message</button>
+                                <button type="button" class="btn  btn-success" data-bs-target="#contactPopupModal"
+                                    data-bs-dismiss="modal" data-bs-toggle="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
     <main>
+        <div id="main-body">
+            <aside id="aside-left">
+                <p id="left-title">Today Alarming Issues</p>
+                <div class="card">
+                    <div> <img src="images\plasticwasteinriver.jpg">
+                        <div id="content">
+                            <a href="#" style="text-decoration: none;">
+                                <h6>Plastic Waste</h6>
+                            </a>
+                            <p> Plastic waste in rivers poses a
+                                global environmental crisis,threatening aquatic ecosystems, wildlife, and human health
+                                Improper disposal and insufficient waste management contribute to the persistence of
+                                plastic
+                                pollution, necessitating urgent efforts to mitigate its far-reaching consequences. </p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#plasticwasteModal" style="width: 120px;">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade " id="plasticwasteModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">PLASTIC WASTE</h5>
+                                <button type="button" class="btn btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="images\plasticwasteinriver.jpg"
+                                    style="display: flex;width: 50%;height: 600px;">
+                                <div id="introduction">
+                                    <p>
+                                        In the 21st century, the pervasive issue of plastic waste has reached
+                                        unprecedented
+                                        proportions, casting a shadow over our global environment. With over 380 million
+                                        metric tons of plastic produced annually, the impact of this synthetic material
+                                        extends far beyond convenience. This essay delves into the current state of
+                                        plastic
+                                        waste, exploring its origins, consequences, and the urgent need for
+                                        transformative
+                                        solutions.
+                                    </p>
+                                    <p>
+                                        The ascendancy of plastic in our daily lives is undeniable. From packaging to
+                                        consumer goods, its versatility and affordability have made it an integral part
+                                        of modern society. However, the convenience of plastic comes at a steep
+                                        environmental cost. Single-use plastics, in particular, contribute significantly
+                                        to the mounting crisis, with their short lifespan and widespread consumption.
+                                    </p>
+                                    <img id="diagram" src="images\plasticwastediagram.png" width="100%">
+                                    <p style="font-size: x-small;">Adopted from
+                                        https://theroundup.org/plastic-waste-statistics/</p>
+                                </div>
+                                <div id="introduction2">
+                                    <h5>Envinronmental Concequences</h5>
+                                    <p style="width: 100%">
+                                        Plastic waste, especially when mismanaged, poses severe environmental
+                                        consequences.
+                                        Annually, an estimated 8 million metric tons find their way into the oceans,
+                                        endangering
+                                        marine ecosystems. The pervasive nature of microplastics, small particles that
+                                        infiltrate various environments, further exacerbates the issue. Marine life
+                                        ingests or
+                                        becomes entangled in plastic debris, disrupting ecosystems and threatening
+                                        biodiversity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div> <img src="images\factorysmokepollution.jpg">
+                        <div id="content">
+                            <a href="https://www.eenews.net/articles/epa-rule-slashes-industrial-smog-forming-emissions/"
+                                target="_blank" style="text-decoration: none;">
+                                <h6>Factory Smoke Emissions</h6>
+                            </a>
+                            <p> Many factories contribute to environmental pollution through
+                                emissions of harmful substances into the air, water, and soil. This pollution can have
+                                detrimental effects on ecosystems, wildlife, and human health. </p>
+                            <button type="button" class="btn btn-primary" style="width: 120px;">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div> <img src="images\vehiclepollution.jpg">
+                        <div id="content">
+                            <a href="https://en.vietnamplus.vn/hcm-city-seeks-ways-to-curb-co2-emissions-from-vehicles/137885.vnp"
+                                target="_blank" style="text-decoration: none;">
+                                <h6>Vehicles Emission</h6>
+                            </a>
+                            <p>Vehicle emissions release pollutants such as nitrogen oxides
+                                (NOx),
+                                volatile organic compounds (VOCs), and particulate matter into the atmosphere. These
+                                pollutants undergo chemical reactions in the presence of sunlight, leading to the
+                                formation
+                                of ground-level ozone and other smog components.</p>
+                            <button type="button" class="btn btn-primary" style="width: 120px;">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <img src="images\thinkgreen.jpg" id="thinkgreen">
+            </aside>
+            <section id="section-middle">
+                <div id="above-slide">
+                    <div id="slide" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#slide" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#slide" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images\deforestationsolution.jpg" alt="Deforestation" class="d-block">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>More Trees More Life</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images\saigonxanhCommunity.jpeg" alt="Extreme Weather" class="d-block">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 style="background-color: rgb(187, 185, 185);border-radius: 15px;">Join hands for
+                                        a
+                                        greener world - together</h5>
+                                    <p style="color: black;">#SAIGONXANH</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images\electriccarsolution.jpg" alt="El Nino Event" class="d-block">
+                                <div class="carousel-caption  d-none d-md-block">
+                                    <h5 style="background-color: rgb(187, 185, 185);border-radius: 15px;">
+                                        Environmentally-Friendly Automobiles</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#slide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#slide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
 
+                    </div>
+                </div>
+                <div id="login-form">
+                    <h5 id="login-title">Login</h5>
+                    <div class="sub-form mb-3">
+                        <div class="row">
+                            <label for="username" class="col-sm-2 col-form-label">Username:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="username">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="password" class="col-sm-2 col-form-label">Password:</label>
+                            <div class="col-sm-5">
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="signIn()">Sign In</button>
+                    <button type="button" class="btn btn-primary" onclick="goBack()">Close</button>
+                </div>
+                <div id="register-form">
+                    <h5 id="register-title">Registration</h5>
+                    <div class="sub-form ">
+                        <div class="row">
+                            <label for="fullname" class="col-sm-4 col-form-label">Full Name:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="fullname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="email" class="col-sm-4 col-form-label">Email:</label>
+                            <div class="col-sm-5">
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="phone" class="col-sm-4 col-form-label">Phone Number:</label>
+                            <div class="col-sm-5">
+                                <input type="phone" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="reg-username" class="col-sm-4 col-form-label">Username:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="reg-username">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="reg-password" class="col-sm-4 col-form-label">Password:</label>
+                            <div class="col-sm-5">
+                                <input type="password" class="form-control" id="reg-password">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="confirm-password" class="col-sm-4 col-form-label">Confirm Password:</label>
+                            <div class="col-sm-5">
+                                <input type="password" class="form-control" id="confirm-password">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="signUp()">Sign Up</button>
+                    <button type="button" class="btn btn-success" onclick="signUp()">Cancel</button>
+                </div>
+                <div id="below-card">
+                    <div id="container1" class="container">
+                        <img src="images\smartwastemanagement.jpg">
+                        <div class="news">
+                            <a href="https://evreka.co/blog/how-citizens-participate-in-smart-waste-management/"
+                                target="_blank">
+                                <h5><strong>Reduce, Reuse, Recycle: Smart Waste Management</strong></h5>
+                                <p> Reduce, Reuse, Recycle" is a mantra promoting sustainable living:
+                                    Reduce: Minimize consumption to decrease resource use.
+                                    Reuse: Extend product lifespans by reusing items.
+                                    Recycle: Transform used materials into new products, promoting a circular economy
+                                    and reducing waste.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="container2" class="container">
+                        <img src="images\sustainabletransportation.png">
+                        <div class="news">
+                            <a href="https://medium.com/@namrata.interiors/what-future-sustainable-transportation-holds-for-us-228c2b210ea5"
+                                target="_blank">
+                                <h5><strong>Sustainable Transportation: Eco-Friendly Commuting</strong></h5>
+                                <p>Sustainable transportation focuses on minimizing environmental impact while meeting
+                                    mobility needs. By opting for eco-friendly modes such as walking, cycling,
+                                    carpooling,
+                                    or public transport, individuals can significantly reduce air pollution and decrease
+                                    their carbon footprint. Embracing sustainable transportation is a crucial step
+                                    toward
+                                    building cleaner, healthier communities and combating the environmental challenges
+                                    posed
+                                    by traditional modes of travel.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside id="aside-right">
+                <p id="right-title">Latest News</p>
+                <div id="right-content">
+                    <marquee direction="up" scrollAmount="3" scrollDelay="50" onMouseMove="stop()" onMouseOut="start()"
+                        id="marquee1">
+                        <p>
+                            <a href="https://lutheranworld.org/events/climate-change-and-human-rights" target="_blank">
+                                <img class="picture1" src="images\climatechange.jpg">Climate Change</a>
+                        </p>
+                        <p>
+                            <a href="https://www.britannica.com/science/El-Nino" target="_blank"> <img class="picture1"
+                                    src="images\elninophenomenon.jpg">El Nino Phenomenon</a>
+                        </p>
+
+                        <a href="https://vietnamnews.vn/society/1500680/hcm-city-s-youths-join-environmental-protection-campaign.html"
+                            target="_blank"> <img class="picture1"
+                                src="images\hcmcyouthsjoinprotectenvironment.jpg">HCMC Youths Environmental Campaign</a>
+                        </p>
+                        <p>
+                            <a href="https://climate.nasa.gov/news/2876/new-studies-increase-confidence-in-nasas-measure-of-earths-temperature/"
+                                target="_blank"> <img class="picture1" src="images\increasingTemperature.gif">Earth Is
+                                Hotter</a>
+                        </p>
+                    </marquee>
+                </div>
+            </aside>
+        </div>
     </main>
-    <footer>
+    <footer id="footer">
+        <div class="row">
+            <div id="footer-col1" class="col">
+                <i class="fa fa-globe fa-4x" aria-hidden="true"></i>
+               <p><strong>SAVE THE EARTH</strong></p>
 
+                <p>Join us in the fight for a greener, healthier planet. Together, let's save the Earth</p>
+            </div>
+            <div id="footer-col2" class="col">
+                <h4>Contact Us</h4>
+                <p>
+                    <strong>Email:</strong> info@savetheearth.org<br>
+                    <strong>Phone:</strong> +(+84) 912-688-897<br>
+                </p>
+                <h4>Connect With Us</h4>
+                <a href="#" class="fa fa-facebook fa-2x"></a>
+                <a href="#" class="fa fa-twitter fa-2x"></a>
+                <a href="#" class="fa fa-instagram fa-2x"></a>
+            </div>
+        </div>
     </footer>
+    <button type="button" id="myButton" tilte="Go to top" onclick="goTop()">Top</button>
+
 </body>
+<script>
+    let myButton = document.getElementById("myButton");
+    window.onscroll = function () {
+        onScrollFunction();
+    };
+    function onScrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            myButton.style.display = "block";
+        } else {
+            myButton.style.display = "none";
+        }
+    }
+    function goTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function clickLogin() {
+        var mySlide = document.getElementById("above-slide");
+        var myLogin = document.getElementById("login-form");
+        var myRegister = document.getElementById("register-form");
+        myRegister.style.display = "none"
+        mySlide.style.display = "none";
+        myLogin.style.display = "block";
+    }
+    function goBack() {
+        var mySlide = document.getElementById("above-slide");
+        var myLogin = document.getElementById("login-form");
+        var myRegister = document.getElementById("register-form");
+        mySlide.style.display = "block";
+        myLogin.style.display = "none";
+        myRegister.style.display = "none"
+    }
+    function signIn() {
+        var mySlide = document.getElementById("above-slide");
+        var myLogin = document.getElementById("login-form");
+        var myRegister = document.getElementById("register-form");
+        myRegister.style.display = "none"
+        mySlide.style.display = "block";
+        myLogin.style.display = "none";
+        alert("Successfully");
+    }
+    function clickSubscribe() {
+        var mySlide = document.getElementById("above-slide");
+        var myRegister = document.getElementById("register-form");
+        var myLogin = document.getElementById("login-form");
+        myLogin.style.display = "none";
+        mySlide.style.display = "none";
+        myRegister.style.display = "block";
+    }
+    function signUp() {
+        var mySlide = document.getElementById("above-slide");
+        var myRegister = document.getElementById("register-form");
+        var myLogin = document.getElementById("login-form");
+        myLogin.style.display = "none";
+        mySlide.style.display = "block";
+        myRegister.style.display = "none";
+    }
+
+</script>
 
 </html>
